@@ -48,7 +48,7 @@ Finally name and push your package:
 ```python
 # build a package based on the current state of wine
 quilt.build("YOUR_USERNAME/YOUR_PACKAGENAME", wine)
-# push it to the regisry
+# push it to the registry.  NOTE: this becomes public and crawlable by Google for example.
 quilt.push("YOUR_USERNAME/YOUR_PACKAGENAME", public=True)
 ```
 
