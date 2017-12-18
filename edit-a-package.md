@@ -31,8 +31,10 @@ Use the `_set` helper method on the top-level package node to create new groups 
 ``` python
 import pandas as pd
 df = pd.DataFrame(dict(x=[1, 2, 3]))
-wine._set(["mygroup", "data"], df) # add a dataframe to the package
-wine._set(["mygroup", "blob"], "localpath/file.txt") # add a file to the package
+# insert a dataframe at wine.mygroup.data()
+wine._set(["mygroup", "data"], df) 
+# insert a file at wine.mygroup.anothergroup.blob()
+wine._set(["mygroup", "anothergroup", "blob"], "localpath/file.txt") #
 ```
 
 Now you can rebuild the package to save the changes and then push the result to Quilt. (Note that only the package owner can modify the package. In the present example you can rebuild the wine package into your own package repository.)
